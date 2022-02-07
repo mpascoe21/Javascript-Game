@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:wght@300;400&display=swap');
+
+//VARIABLES
+$font-display: 'Dela Gothic One', cursive;
+$font-utility: 'Roboto', sans-serif;
+
+$color-black: #1B2122;
+$color-white: rgb(235, 255, 255);
+$color-blue: rgb(74, 14, 153);
+$color-red: #CB0813;
+$color-green: #6DAB08;
+$color-grey: #c0c7cf;
+
+
+* {
+  margin: 0;
+  padding: 0;  
+  //background: linear-gradient(to bottom, rgba(22, 72, 147, 1), rgb(93, 113, 143));
+  color: $color-black;
+  font-family: $font-display;
+  font-weight: 400;
+  //background-color: $color-blue;
+}
+
+body {
+  text-align: center;
+  max-width: 700px; 
+  margin: auto; // CENTER ON PAGE
+  //background: linear-gradient(to bottom, rgba(22, 72, 147, 1), rgb(93, 113, 143));
+  background: $color-blue;
+  
+}

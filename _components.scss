@@ -1,0 +1,104 @@
+
+.header {
+  margin-bottom: 5px;
+  color: $color-white;
+  //font-weight: 400;
+  font-size: 42px;
+  padding: 10px 0;
+  filter: drop-shadow(0 0 0.75rem rgba(0,0,0,0.5));
+}
+
+.score {
+  color: $color-white;
+  text-align: left;
+  padding: 0 0 0 10%;
+  
+
+}
+
+.quizQuestionCard {
+  
+  &__question {
+    position: relative;
+    margin: 10px auto 20px;   
+    height: 250px;
+    width: 80%;      
+    max-width: 600px; 
+    border-radius: 10px;   
+    box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.5);
+    background-color: $color-white;
+  }
+
+  &__img {
+    // object-fit: none;
+    width: 100%;
+    max-height: 100%;    
+    border-radius: 10px;   
+  }
+
+  &__caption {
+    
+    width: 100%;
+    height: auto;
+    
+    
+    position: absolute;
+    vertical-align: bottom;
+    bottom: 0;
+    padding: 75px 0px 10px;
+    
+    //padding: 30px 0 10px;
+    //background: $color-white;
+    background: linear-gradient(180deg, rgba(22, 72, 147, 0) 0%, rgba(255, 255, 255, 0.90) 50%);
+    border-radius: 0 0 10px 10px;
+   
+    
+  }
+
+  &__answerBtn {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin: 10px auto;
+    width: 80%;
+    height: 50px;    
+    //padding: 15px;
+    border-radius: 100px;
+    background-color: $color-white;
+    box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.5);
+    //box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.6);
+    
+  }
+
+  &__option {
+    
+    margin: 0 5px;
+    //padding-top: 5px;
+    //text-align: center;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    color: rgb(112, 9, 126);
+    border-radius: 100px;
+    background-color: $color-grey;
+    box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.6);
+  }
+
+  &__answer {
+    padding-left: 10px;
+  }
+}
+
+
+.start-game {
+  margin-top: 20px;
+  color: $color-black;
+  background-color: $color-white;
+  width: 80%;
+  height: 50px;
+  border-radius: 100px;
+  border-style: none;
+  font-size: 28px;
+  box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.5);
+}

@@ -1,0 +1,39 @@
+.quizQuestionCard {
+  background-color: aqua;
+  height: 500px;
+}
+.quizQuestionCard__question {
+  height: 150px;
+  width: 100%;
+  border: 2px solid red;
+}
+.quizQuestionCard__img {
+  width: auto;
+  height: 90px;
+}
+.quizQuestionCard__answerBtn {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  width: 90%;
+  height: 60px;
+  border: 2px solid red;
+  border-radius: 100px;
+}
+.quizQuestionCard__option {
+  margin: 0 20px;
+  padding: 10px;
+  border: 2px solid blue;
+  border-radius: 100px;
+}
+
+.header {
+  color: red;
+}
+
+.play-again {
+  color: azure;
+  background-color: blue;
+  width: 150px;
+  height: 30px;
+}
