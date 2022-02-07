@@ -178,14 +178,14 @@ const buildQuestionArr = () => {
   questionArr.sort(() => Math.random() - 0.5);
   console.log(questionArr);
 };
+
 const displayCurrentQuestion = (question) => {
   quizQuestionCard.innerHTML = question.renderQuestionHTML();
 };
 
 const startGame = () => {
   buildQuestionArr();
-
-  // const randomNum = ath.random() * questionArr.Math.floor(Mlength);
+  // const randomNum = Math.random() * questionArr.Math.floor(Mlength);
   // console.log(questionArr[randomNum]);
 
   displayCurrentQuestion(questionArr[0]);
@@ -193,16 +193,16 @@ const startGame = () => {
   startBtn.innerHTML = "Next Question";
   startBtn.removeAttribute("onclick");
   startBtn.setAttribute("onclick", "nextQuestion()");
-  // startBtn.addEventListener("click", () => {
-  //   nextQuestion();
-  // });
 };
 
 const nextQuestion = () => {
   questionArr.shift();
   console.log(questionArr);
   if (questionArr.length === 0) {
-    quizQuestionCard.innerHTML = "Game Over";
+    quizQuestionCard.innerHTML = `<h1 class="quizQuestionCard__gameOver">GAME OVER</h1>`;
+    startBtn.innerHTML = "Play Again";
+    startBtn.removeAttribute("onclick"); // I AM REPEATING AND CONSCIOUS OF DRY?
+    startBtn.setAttribute("onclick", "startGame()");
   } else {
     displayCurrentQuestion(questionArr[0]);
   }
