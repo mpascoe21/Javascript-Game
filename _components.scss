@@ -50,9 +50,7 @@
     //padding: 30px 0 10px;
     //background: $color-white;
     background: linear-gradient(180deg, rgba(22, 72, 147, 0) 0%, rgba(255, 255, 255, 0.90) 50%);
-    border-radius: 0 0 10px 10px;
-   
-    
+    border-radius: 0 0 10px 10px;  
   }
 
   &__answerBtn {
@@ -87,6 +85,14 @@
 
   &__answer {
     padding-left: 10px;
+  }
+
+  &__gameOver {
+    color: $color-yellow;  
+    filter: drop-shadow(0 0 0.75rem rgba(0,0,0,0.5));    
+    padding: 50px 0;
+    font-family: $font-gameOver;
+    font-size: 36px;
   }
 }
 
