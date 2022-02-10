@@ -194,29 +194,9 @@ const checkAnswer = () => {
         console.log(score);
         let scoreDisplay = document.querySelector(".score__num");
         scoreDisplay.innerHTML = score;
-        // document.querySelector(".score__num").innerHTML = score;
-        //console.log(score);
-        //console.log(scoreDisplay);
-
-        // answerButtons.forEach((answerButton) => {
-        //   answerButton.removeEventListener("click");
-        // });
-
-        // answerButton.removeEventListener("click", ());
-        // setTimeout(() => { //MOVES ON TO NEXT QUESTION AFTER 1.5s
-        //   nextQuestion();
-        // }, 1500);
       } else {
         answerButton.style.backgroundColor = "red";
-
-        // answerButtons.forEach((answerButton) => {
-        //   answerButton.removeAttribute("onclick");
-        // });
-        // setTimeout(() => {
-        //   nextQuestion();
-        // }, 1500);
       }
-      //console.log("clicked");
     });
   });
 };
