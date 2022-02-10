@@ -12,8 +12,12 @@
   color: $color-white;
   text-align: left;
   padding: 0 0 0 10%;
-  
 
+  &__num {
+    color: $color-white;
+    text-align: left;
+    padding: 0 0 0 2%;
+  }
 }
 
 .quizQuestionCard {
@@ -54,6 +58,7 @@
   }
 
   &__answerBtn {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-self: center;
@@ -96,8 +101,17 @@
   }
 }
 
+.correctAnswer {
+  background-color: $color-green;
+}
+
+.wrongAnswer{
+  background-color: $color-red;
+}
+
 
 .start-game {
+  cursor: pointer;
   margin-top: 20px;
   color: $color-black;
   background-color: $color-white;

@@ -12,15 +12,11 @@
 // END OF GAME -> DISPLAY NUMBER OF CORRECT ANSWERS -> SOME MESSAGE AND PLAY AGAIN OPTION
 // CLEAN SWEEP -> TIME/SPEED TO COMPLETE -> A CELEBRATION(ANIMATION) AND PLAY AGAIN OPTION
 
+console.dir(document);
+
 const quizQuestionCard = document.querySelector(".quizQuestionCard");
-const answers = document.querySelectorAll(".quizQuestionCard__answerBtn");
+
 const startBtn = document.querySelector(".start-game");
-// const quizImg = document.querySelector(".quizQuestionCard__img");
-// const quizCaption = document.querySelector(".quizQuestionCard__caption");
-// const quizAnswerA = document.querySelector(".quizQuestionCard__answer-a");
-// const quizAnswerB = document.querySelector(".quizQuestionCard__answer-b");
-// const quizAnswerC = document.querySelector(".quizQuestionCard__answer-c");
-// const quizAnswerD = document.querySelector(".quizQuestionCard__answer-d");
 
 class QuizQuestionCard {
   constructor(
@@ -44,19 +40,10 @@ class QuizQuestionCard {
     //   isCorrect: true,
     // }]
   }
-  // question() {
-  //   quizImg.src = this.image;
-  //   quizCaption.innerHTML = this.caption;
-  //   quizAnswerA.innerHTML = this.answerA;
-  //   quizAnswerB.innerHTML = this.answerB;
-  //   quizAnswerC.innerHTML = this.answerC;
-  //   quizAnswerD.innerHTML = this.answerD;
-
-  //   return question();
-  // }
 
   renderQuestionHTML() {
-    return `    
+    return `  
+      <h4 class="score">Score <span class="score__num">${score}</span></h4>  
       <figure class="quizQuestionCard__question">
         <img class="quizQuestionCard__img" src=${this.image} alt="" />
         <p class="quizQuestionCard__caption">${this.caption}</p>
@@ -84,19 +71,6 @@ class QuizQuestionCard {
   `;
   }
 }
-
-// const answers = document.querySelectorAll(".quizQuestionCard__answerBtn");
-
-// console.log(answers);
-
-// answers.forEach((answer) => {
-//   answer.addEventListener("click", (event) => {
-//     // if answer === true -> background green -> move to next question
-
-//     event.style.backgroundColor = "green";
-//     // if answer === false -> background red -> show correct answer in green -> move to next question
-//   })
-// });
 
 const questionArr = [];
 
@@ -193,6 +167,58 @@ const startGame = () => {
   startBtn.innerHTML = "Next Question";
   startBtn.removeAttribute("onclick");
   startBtn.setAttribute("onclick", "nextQuestion()");
+
+  checkAnswer();
+};
+
+//scoreDisplay = 0;
+//console.log(scoreDisplay);
+let score = 0;
+
+const checkAnswer = () => {
+  const answerButtons = document.querySelectorAll(
+    ".quizQuestionCard__answerBtn"
+  );
+
+  answerButtons.forEach((answerButton) => {
+    answerButton.addEventListener("click", () => {
+      console.log(answerButton.childNodes[3].innerHTML);
+      console.log(questionArr[0].correctAnswer);
+
+      if (
+        questionArr[0].correctAnswer === answerButton.childNodes[3].innerHTML
+      ) {
+        answerButton.style.backgroundColor = "green";
+        console.log(score);
+        score += 1;
+        console.log(score);
+        let scoreDisplay = document.querySelector(".score__num");
+        scoreDisplay.innerHTML = score;
+        // document.querySelector(".score__num").innerHTML = score;
+        //console.log(score);
+        //console.log(scoreDisplay);
+
+        // answerButtons.forEach((answerButton) => {
+        //   answerButton.removeEventListener("click");
+        // });
+
+        // answerButton.removeEventListener("click", ());
+        // setTimeout(() => { //MOVES ON TO NEXT QUESTION AFTER 1.5s
+        //   nextQuestion();
+        // }, 1500);
+      } else {
+        answerButton.style.backgroundColor = "red";
+
+        // answerButtons.forEach((answerButton) => {
+        //   answerButton.removeAttribute("onclick");
+        // });
+        // setTimeout(() => {
+        //   nextQuestion();
+        // }, 1500);
+      }
+      //console.log("clicked");
+    });
+  });
 };
 
 const nextQuestion = () => {
@@ -205,23 +231,6 @@ const nextQuestion = () => {
     startBtn.setAttribute("onclick", "startGame()");
   } else {
     displayCurrentQuestion(questionArr[0]);
+    checkAnswer();
   }
 };
-
-const correctAnswer = this.correctAnswer;
-
-answers.forEach((answer) => {
-  answer.addEventListener("click", (event) => {
-    // if answer === true -> background green -> move to next question
-    if (event.target === true) {
-      answer.style.backgroundColor = "green";
-    } else if (correctAnswer === false) {
-      (answer.style.backgroundColor = "red"),
-        (this.correctAnswer.style.backgroundColor = "green");
-    }
-    // if answer === false -> background red -> show correct answer in green -> move to next question
-  });
-  return answers;
-});
-
-//console.dir(quizQuestionCard);

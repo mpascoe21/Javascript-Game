@@ -28,6 +28,11 @@ body {
   text-align: left;
   padding: 0 0 0 10%;
 }
+.score__num {
+  color: #ebffff;
+  text-align: left;
+  padding: 0 0 0 2%;
+}
 
 .quizQuestionCard__question {
   position: relative;
@@ -55,6 +60,7 @@ body {
   border-radius: 0 0 10px 10px;
 }
 .quizQuestionCard__answerBtn {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-self: center;
@@ -87,7 +93,16 @@ body {
   font-size: 36px;
 }
 
+.correctAnswer {
+  background-color: #6DAB08;
+}
+
+.wrongAnswer {
+  background-color: #CB0813;
+}
+
 .start-game {
+  cursor: pointer;
   margin-top: 20px;
   color: #1B2122;
   background-color: #ebffff;
