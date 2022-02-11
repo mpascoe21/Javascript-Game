@@ -66,6 +66,7 @@
     width: 80%;
     height: 50px;    
     //padding: 15px;
+    border: none;
     border-radius: 100px;
     background-color: $color-white;
     box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.5);
@@ -98,6 +99,12 @@
     padding: 50px 0;
     font-family: $font-gameOver;
     font-size: 36px;
+  }
+
+  &__endOfQuizMessage {
+    color: $color-white;
+    
+    padding-bottom: 5%;
   }
 }
 
