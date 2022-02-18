@@ -1,0 +1,67 @@
+@media screen and (min-width: 768px) {
+  * {
+    font-size: 20px;
+  }
+
+  .header {
+    font-size: 3rem;
+  }
+
+  .start-game {
+    height: 60px;
+  }
+
+  .quizQuestionCard__launchMessage {
+    font-size: 1.5rem;
+  }
+  .quizQuestionCard__answerBtn {
+    height: 60px;
+  }
+  .quizQuestionCard__option {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+  }
+  .quizQuestionCard__gameOver {
+    font-size: 3rem;
+  }
+  .quizQuestionCard__endOfQuizMessage {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header {
+    font-size: 60px;
+  }
+
+  .score {
+    padding: 0;
+  }
+
+  .quizQuestionCard__question {
+    margin: 3% auto 3%;
+    width: 100%;
+    max-width: 700px;
+    height: 40vh;
+  }
+  .quizQuestionCard__answerBtnContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .quizQuestionCard__answerBtn {
+    width: 100%;
+    margin: 0;
+  }
+  .quizQuestionCard__answer {
+    font-size: 16px;
+  }
+
+  .start-game {
+    margin-top: 6%;
+  }
+}

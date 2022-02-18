@@ -44,25 +44,29 @@ class QuizQuestionCard {
         <p class="quizQuestionCard__caption">${this.caption}</p>
       </figure>
 
-      <button class="quizQuestionCard__answerBtn">
-        <p class="quizQuestionCard__option">A</p>
-        <p class="quizQuestionCard__answer">${this.answerA}</p>
-      </button>
+      <div class="quizQuestionCard__answerBtnContainer">
+        <button class="quizQuestionCard__answerBtn">
+          <p class="quizQuestionCard__option">A</p>
+          <p class="quizQuestionCard__answer">${this.answerA}</p>
+        </button>
 
-      <button class="quizQuestionCard__answerBtn">
-        <p class="quizQuestionCard__option">B</p>
-        <p class="quizQuestionCard__answer">${this.answerB}</p>
-      </button>
+        <button class="quizQuestionCard__answerBtn">
+          <p class="quizQuestionCard__option">B</p>
+          <p class="quizQuestionCard__answer">${this.answerB}</p>
+        </button>
 
-      <button class="quizQuestionCard__answerBtn">
-        <p class="quizQuestionCard__option">C</p>
-        <p class="quizQuestionCard__answer">${this.answerC}</p>
-      </button>
+        <button class="quizQuestionCard__answerBtn">
+          <p class="quizQuestionCard__option">C</p>
+          <p class="quizQuestionCard__answer">${this.answerC}</p>
+        </button>
 
-      <button class="quizQuestionCard__answerBtn">
-        <p class="quizQuestionCard__option">D</p>
-        <p class="quizQuestionCard__answer">${this.answerD}</p>
-      </button>      
+        <button class="quizQuestionCard__answerBtn">
+          <p class="quizQuestionCard__option">D</p>
+          <p class="quizQuestionCard__answer">${this.answerD}</p>
+        </button>      
+      </div>
+
+
   `;
   }
 }

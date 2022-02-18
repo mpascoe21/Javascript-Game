@@ -6,6 +6,7 @@
   color: #1B2122;
   font-family: "Dela Gothic One", cursive;
   font-weight: 400;
+  font-size: 16px;
 }
 
 body {
@@ -16,10 +17,9 @@ body {
 }
 
 .header {
-  margin-bottom: 5px;
   color: #ebffff;
-  font-size: 42px;
-  padding: 10px 0;
+  font-size: 2.5rem;
+  padding: 3% 0 4.5%;
   filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
 }
 
@@ -34,10 +34,16 @@ body {
   padding: 0 0 0 2%;
 }
 
+.quizQuestionCard__launchMessage {
+  color: #ebffff;
+  margin: 7% 0;
+}
 .quizQuestionCard__question {
+  display: flex;
+  justify-content: center;
   position: relative;
-  margin: 10px auto 20px;
-  height: 250px;
+  margin: 3% auto 6%;
+  height: 30vh;
   width: 80%;
   max-width: 600px;
   border-radius: 10px;
@@ -46,34 +52,37 @@ body {
 }
 .quizQuestionCard__img {
   width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
+  max-height: 75%;
+  border-radius: 10px 10px 0 0;
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), to(black));
 }
 .quizQuestionCard__caption {
-  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  font-size: 1.125rem;
+  width: 90%;
   height: auto;
   position: absolute;
   vertical-align: bottom;
   bottom: 0;
-  padding: 75px 0px 10px;
-  background: linear-gradient(180deg, rgba(22, 72, 147, 0) 0%, rgba(255, 255, 255, 0.9) 50%);
+  padding: 3% 4.5%;
   border-radius: 0 0 10px 10px;
 }
 .quizQuestionCard__answerBtn {
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-self: center;
-  margin: 10px auto;
+  margin: 3% auto;
   width: 80%;
   height: 50px;
   border: none;
   border-radius: 100px;
   background-color: #ebffff;
   box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.6);
 }
 .quizQuestionCard__option {
-  margin: 0 5px;
+  margin: 0 0 0 5px;
   font-size: 24px;
   width: 40px;
   height: 40px;
@@ -84,37 +93,98 @@ body {
   box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.6);
 }
 .quizQuestionCard__answer {
-  padding-left: 10px;
+  padding: 0 15px 0 10px;
+  width: 75%;
 }
 .quizQuestionCard__gameOver {
   color: #fbff00;
   filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
-  padding: 50px 0;
+  padding: 12% 0;
   font-family: "Press Start 2P", cursive;
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 .quizQuestionCard__endOfQuizMessage {
   color: #ebffff;
-  padding-bottom: 5%;
-}
-
-.correctAnswer {
-  background-color: #6DAB08;
-}
-
-.wrongAnswer {
-  background-color: #CB0813;
+  padding-bottom: 12%;
 }
 
 .start-game {
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 3%;
   color: #1B2122;
   background-color: #ebffff;
   width: 80%;
   height: 50px;
   border-radius: 100px;
   border-style: none;
-  font-size: 28px;
+  font-size: 1.75rem;
   box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 768px) {
+  * {
+    font-size: 20px;
+  }
+
+  .header {
+    font-size: 3rem;
+  }
+
+  .start-game {
+    height: 60px;
+  }
+
+  .quizQuestionCard__launchMessage {
+    font-size: 1.5rem;
+  }
+  .quizQuestionCard__answerBtn {
+    height: 60px;
+  }
+  .quizQuestionCard__option {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+  }
+  .quizQuestionCard__gameOver {
+    font-size: 3rem;
+  }
+  .quizQuestionCard__endOfQuizMessage {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header {
+    font-size: 60px;
+  }
+
+  .score {
+    padding: 0;
+  }
+
+  .quizQuestionCard__question {
+    margin: 3% auto 3%;
+    width: 100%;
+    max-width: 700px;
+    height: 40vh;
+  }
+  .quizQuestionCard__answerBtnContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .quizQuestionCard__answerBtn {
+    width: 100%;
+    margin: 0;
+  }
+  .quizQuestionCard__answer {
+    font-size: 16px;
+  }
+
+  .start-game {
+    margin-top: 6%;
+  }
 }

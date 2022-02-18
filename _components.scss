@@ -1,10 +1,9 @@
 
-.header {
-  margin-bottom: 5px;
+.header {  
   color: $color-white;
   //font-weight: 400;
-  font-size: 42px;
-  padding: 10px 0;
+  font-size: 2.5rem;
+  padding: 3% 0 4.5%;
   filter: drop-shadow(0 0 0.75rem rgba(0,0,0,0.5));
 }
 
@@ -21,11 +20,18 @@
 }
 
 .quizQuestionCard {
-  
+
+  &__launchMessage {
+    color: $color-white;
+    margin: 7% 0;
+  }
+ 
   &__question {
+    display: flex;
+    justify-content: center;
     position: relative;
-    margin: 10px auto 20px;   
-    height: 250px;
+    margin: 3% auto 6%;   
+    height: 30vh;
     width: 80%;      
     max-width: 600px; 
     border-radius: 10px;   
@@ -34,51 +40,50 @@
   }
 
   &__img {
-    // object-fit: none;
+    // object-fit: cover;
     width: 100%;
-    max-height: 100%;    
-    border-radius: 10px;   
+    max-height: 75%;    
+    border-radius: 10px 10px 0 0 ;       
+    //background: linear-gradient(180deg, transparent, $color-red);
+    //background: linear-gradient(180deg, rgba(246, 248, 250, 0) 0%, rgba(255, 255, 255, 0.90) 50%);
+    -webkit-mask-image:-webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));     
   }
 
   &__caption {
-    
-    width: 100%;
-    height: auto;
-    
-    
+    font-family: $font-utility;
+    font-weight: bolder;
+    font-size: 1.125rem;
+   
+    //margin: auto;
+    width: 90%;
+    height: auto;    
     position: absolute;
     vertical-align: bottom;
     bottom: 0;
-    padding: 75px 0px 10px;
-    
-    //padding: 30px 0 10px;
-    //background: $color-white;
-    background: linear-gradient(180deg, rgba(22, 72, 147, 0) 0%, rgba(255, 255, 255, 0.90) 50%);
+    padding: 3% 4.5%;    
+    //background: linear-gradient(180deg, rgba(246, 248, 250, 0) 0%, rgba(255, 255, 255, 0.90) 50%);
     border-radius: 0 0 10px 10px;  
   }
+
+ 
 
   &__answerBtn {
     cursor: pointer;
     display: flex;
-    align-items: center;
-    justify-self: center;
-    margin: 10px auto;
+    align-items: center;    
+    margin: 3% auto;
     width: 80%;
-    height: 50px;    
-    //padding: 15px;
+    height: 50px; 
+   //height: 7vh;       
     border: none;
     border-radius: 100px;
     background-color: $color-white;
     box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.5);
-    //box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.6);
-    
+    box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.6);    
   }
 
-  &__option {
-    
-    margin: 0 5px;
-    //padding-top: 5px;
-    //text-align: center;
+  &__option {    
+    margin: 0 0 0 5px;    
     font-size: 24px;
     width: 40px;
     height: 40px;
@@ -90,42 +95,34 @@
   }
 
   &__answer {
-    padding-left: 10px;
+    padding: 0 15px 0 10px;
+    width: 75%;    
   }
 
   &__gameOver {
     color: $color-yellow;  
     filter: drop-shadow(0 0 0.75rem rgba(0,0,0,0.5));    
-    padding: 50px 0;
+    padding: 12% 0;
     font-family: $font-gameOver;
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 
   &__endOfQuizMessage {
-    color: $color-white;
-    
-    padding-bottom: 5%;
+    color: $color-white;    
+    padding-bottom: 12%;
   }
 }
 
-.correctAnswer {
-  background-color: $color-green;
-}
-
-.wrongAnswer{
-  background-color: $color-red;
-}
-
-
 .start-game {
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 3%;
   color: $color-black;
   background-color: $color-white;
   width: 80%;
+  //height: 7vh;
   height: 50px;
   border-radius: 100px;
   border-style: none;
-  font-size: 28px;
+  font-size: 1.75rem;
   box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.5);
 }
