@@ -301,7 +301,7 @@ const buildQuestionArr = () => {
   questionArr.sort(() => Math.random() - 0.5);
   console.log(questionArr);
 
-  let gameQuestionArr = questionArr.slice(0, 22);
+  let gameQuestionArr = questionArr.slice(0, 10);
   console.log(gameQuestionArr);
 
   questionArr = gameQuestionArr;

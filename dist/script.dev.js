@@ -80,7 +80,7 @@ var buildQuestionArr = function buildQuestionArr() {
     return Math.random() - 0.5;
   });
   console.log(questionArr);
-  var gameQuestionArr = questionArr.slice(0, 22);
+  var gameQuestionArr = questionArr.slice(0, 10);
   console.log(gameQuestionArr);
   questionArr = gameQuestionArr;
   console.log(questionArr);
