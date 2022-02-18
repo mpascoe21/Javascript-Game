@@ -79,7 +79,6 @@ body {
   border-radius: 100px;
   background-color: #ebffff;
   box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.6);
 }
 .quizQuestionCard__option {
   margin: 0 0 0 5px;
