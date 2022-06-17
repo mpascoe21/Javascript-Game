@@ -7,7 +7,7 @@ $font-utility: 'Roboto', sans-serif;
 $font-gameOver: 'Press Start 2P', cursive;
 
 $color-black: #1B2122;
-$color-white: rgb(235, 255, 255);
+$color-white: #ebffff;
 $color-blue: rgb(33, 17, 173);
 //$color-blue: rgb(74, 14, 153);
 $color-red: #CB0813;
@@ -32,7 +32,24 @@ body {
   text-align: center;
   max-width: 700px; 
   margin: auto; // CENTER ON PAGE
-  background: linear-gradient(to bottom, rgb(49, 22, 83), rgb(33, 17, 173));
-  //background: $color-blue;
-  
+  //background: linear-gradient(to bottom, rgb(49, 22, 83), rgb(33, 17, 173));
+  background: linear-gradient(to bottom, rgb(49, 22, 83), rgb(111, 17, 173));
+  //background: linear-gradient(135deg, hsla(265, 79%, 41%, 1) 20%, hsla(310, 91%, 54%, 1) 100%);
+  //background: linear-gradient(to right bottom, #3b078c, #6c05a0, #9a01b1, #c800c0, #f602cc);
+  // background:  linear-gradient(
+  //   150deg,
+  //   hsl(263deg 90% 29%) 0%,
+  //   hsl(275deg 93% 31%) 11%,
+  //   hsl(284deg 95% 33%) 22%,
+  //   hsl(292deg 98% 35%) 32%,
+  //   hsl(299deg 100% 37%) 41%,
+  //   hsl(305deg 100% 42%) 50%,
+  //   hsl(310deg 98% 49%) 59%,
+  //   hsl(291deg 81% 63%) 67%,
+  //   hsl(265deg 100% 73%) 75%,
+  //   hsl(235deg 100% 75%) 82%,
+  //   hsl(213deg 100% 66%) 89%,
+  //   hsl(202deg 100% 55%) 96%,
+  //   hsl(197deg 100% 50%) 100%
+  // );
 }
